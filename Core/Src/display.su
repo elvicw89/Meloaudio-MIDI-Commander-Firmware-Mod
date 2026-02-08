@@ -1,0 +1,6 @@
+../Core/Src/display.c:41:6:display_init	24	static
+../Core/Src/display.c:65:6:display_setConfigName	16	static
+../Core/Src/display.c:73:6:display_showLabelText	16	static
+../Core/Src/display.c:83:6:display_showLabelBitmap	24	static
+../Core/Src/display.c:99:6:display_setBankName	32	static
+../Core/Src/display.c:92:6:display_tick	8	static

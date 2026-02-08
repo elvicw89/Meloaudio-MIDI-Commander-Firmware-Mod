@@ -1,0 +1,12 @@
+../Core/Src/midi_cmds.c:52:9:midiCmd_get_cmd_toggle	0	static
+../Core/Src/midi_cmds.c:60:10:midiCmd_get_delay	0	static
+../Core/Src/midi_cmds.c:64:6:midi_serial_start_next_dma	24	static
+../Core/Src/midi_cmds.c:95:6:HAL_UART_TxCpltCallback	0	static
+../Core/Src/midi_cmds.c:104:8:midiCmd_send_stop_command	8	static
+../Core/Src/midi_cmds.c:136:6:midiCmd_send_byte_serial	8	static
+../Core/Src/midi_cmds.c:152:8:midiCmd_send_start_command	8	static
+../Core/Src/midi_cmds.c:181:8:midiCmd_send_pb_command_from_rom	16	static
+../Core/Src/midi_cmds.c:211:8:midiCmd_send_note_command_from_rom	16	static
+../Core/Src/midi_cmds.c:242:8:midiCmd_send_cc_command_from_rom	24	static
+../Core/Src/midi_cmds.c:296:8:midiCmd_send_cc_value	16	static
+../Core/Src/midi_cmds.c:336:8:midiCmd_send_pc_command_from_rom	24	static

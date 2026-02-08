@@ -1,0 +1,2 @@
+../Core/Src/flash_midi_settings.c:68:6:flash_settings_erase	32	static
+../Core/Src/flash_midi_settings.c:95:6:flash_settings_write	32	static

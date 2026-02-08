@@ -1,0 +1,9 @@
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:6:6:ssd1306_TestBorder	16	static
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:35:6:ssd1306_TestFonts	8	static
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:65:6:ssd1306_TestFPS	104	static
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:101:6:ssd1306_TestLine	16	static
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:109:6:ssd1306_TestRectangle	24	static
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:119:6:ssd1306_TestCircle	8	static
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:129:6:ssd1306_TestArc	16	static
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:135:6:ssd1306_TestPolyline	24	static
+../Middlewares/stm32-ssd1306-master/ssd1306/ssd1306_tests.c:152:6:ssd1306_TestAll	40	static

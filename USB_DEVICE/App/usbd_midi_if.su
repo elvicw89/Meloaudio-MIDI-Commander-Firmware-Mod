@@ -1,0 +1,7 @@
+../USB_DEVICE/App/usbd_midi_if.c:211:10:MIDI_DataTx	8	static
+../USB_DEVICE/App/usbd_midi_if.c:37:6:abort_sysex_message	0	static
+../USB_DEVICE/App/usbd_midi_if.c:41:6:sysex_send_message	24	static
+../USB_DEVICE/App/usbd_midi_if.c:78:6:sysex_erase_settings	8	static
+../USB_DEVICE/App/usbd_midi_if.c:92:6:sysex_write_flash	24	static
+../USB_DEVICE/App/usbd_midi_if.c:111:6:process_sysex_message	16	static
+../USB_DEVICE/App/usbd_midi_if.c:144:10:MIDI_DataRx	32	static

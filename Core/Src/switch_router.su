@@ -1,0 +1,11 @@
+../Core/Src/switch_router.c:78:6:sw_scan	12	static
+../Core/Src/switch_router.c:119:10:get_rom_pointer	0	static
+../Core/Src/switch_router.c:124:6:sw_led_init	24	static
+../Core/Src/switch_router.c:159:5:get_available_delayed_cmd_slot	0	static
+../Core/Src/switch_router.c:169:6:handle_delayed_cmds	24	static
+../Core/Src/switch_router.c:188:6:set_cmd_duration_delay	16	static
+../Core/Src/switch_router.c:196:6:handle_cmd_sw_down	16	static
+../Core/Src/switch_router.c:251:6:handle_cmd_sw_up	16	static
+../Core/Src/switch_router.c:294:6:set_led	0	static
+../Core/Src/switch_router.c:300:6:update_leds_on_bank_change	24	static
+../Core/Src/switch_router.c:310:6:handle_switches	32	static
