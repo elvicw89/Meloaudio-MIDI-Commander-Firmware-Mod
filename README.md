@@ -87,8 +87,9 @@ This document lists the custom modifications made to the MeloAudio MIDI Commande
   Artifacts
   - Built firmware: MIDI_Commander_Custom/DFU Release/MIDI_Commander_Custom.bin
 
- # command
+ ## Command
   dfu-util -a 0 -s 0x08003000:leave -D "MIDI_Commander_Custom/DFU Release/MIDI_Commander_Custom.bin-WORKING-EXPRESSION-PEDAL"
-
+## NEXT UPDATE
+Next will be the mini UI that displays the expression pedal values. battery usage and battery charging.
   
 
