@@ -40,3 +40,49 @@ This document lists the custom modifications made to the MeloAudio MIDI Commande
 
 ## Notes
 - Battery and expression probe code was explored but is currently disabled.
+
+  # Expression Pedal Mods (CC11 + Stability)
+  ## Date: 2026-02-09
+
+  # Summary
+  - Expression pedal now sends CC11 (Expression) on the global MIDI channel.
+  - Added filtering, deadband, stability gating, and minimum send interval to prevent jitter.
+
+  Firmware Changes
+  1) New CC sender helper
+  - File: MIDI_Commander_Custom/Core/Inc/midi_cmds.h
+    - Added: int8_t midiCmd_send_cc_value(uint8_t channel, uint8_t cc_number, uint8_t value);
+  - File: MIDI_Commander_Custom/Core/Src/midi_cmds.c
+    - Added midiCmd_send_cc_value(): sends single CC message on specified channel/CC/value.
+
+  2) Expression pedal input + CC11 mapping + stability
+  - File: MIDI_Commander_Custom/Core/Src/main.c
+    - Added expression subsystem:
+      - EXPRESSION_ENABLED = 1
+      - EXPRESSION_ADC_CHANNEL = 8 (PB0)
+      - EXPRESSION_CC_NUMBER = 11
+      - EXPRESSION_POLL_MS = 12
+      - EXPRESSION_DEADBAND = 4
+      - EXPRESSION_STABLE_REQUIRED = 5
+      - EXPRESSION_MIN_SEND_MS = 30
+      - EXPRESSION_MIN_RAW = 100
+      - EXPRESSION_MAX_RAW = 4000
+      - EXPRESSION_SCALE_NUM/DEN = 105/100
+    - Added expression_gpio_init() to configure selected ADC pin as analog input.
+    - Added expression_apply_calibration(): clamps and scales raw ADC.
+    - Added expression_update():
+      - EMA filter (3/4 previous + 1/4 new)
+      - Converts 12-bit to 7-bit via >> 5
+      - Deadband and stability gating
+      - Minimum send interval
+      - Sends CC11 via midiCmd_send_cc_value().
+    - Hooked expression_update() into main loop.
+    - ADC init runs when expression mode is enabled.
+
+  Behavior Notes
+  - Uses global MIDI channel from pGlobalSettings[GLOBAL_SETTINGS_CHANNEL] (defaults to 1).
+  - Value range is 0..127.
+  - Deadband/stability settings were tuned to eliminate idle jitter.
+
+  Artifacts
+  - Built firmware: MIDI_Commander_Custom/DFU Release/MIDI_Commander_Custom.bin
